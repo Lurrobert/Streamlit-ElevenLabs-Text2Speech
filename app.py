@@ -25,7 +25,7 @@ with st.sidebar:
 
 if st.button("🔈 Generate Speech"):
     try:
-        audio = generate(text=text, voice=voice, model='eleven_multilingual_v1',
+        audio = generate(text=text, voice=voice, model='eleven_english_v2',
                          api_key=API_KEY if API_KEY else st.secrets['API_KEY'])
         st.audio(data=audio)
     except UnauthenticatedRateLimitError:
